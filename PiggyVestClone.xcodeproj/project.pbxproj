@@ -56,15 +56,63 @@
 		B4F263732657AA88009930FD /* PiggyVestClone */ = {
 			isa = PBXGroup;
 			children = (
-				B4F263742657AA88009930FD /* AppDelegate.swift */,
-				B4F263762657AA88009930FD /* SceneDelegate.swift */,
-				B4F263782657AA88009930FD /* ViewController.swift */,
-				B4F2637A2657AA88009930FD /* Main.storyboard */,
-				B4F2637D2657AA89009930FD /* Assets.xcassets */,
-				B4F2637F2657AA89009930FD /* LaunchScreen.storyboard */,
+				B4F2638D2657ABF1009930FD /* App + Delegate */,
+				B4F263882657AAD6009930FD /* Model */,
+				B4F263892657AAE2009930FD /* View */,
+				B4F2638A2657AAED009930FD /* Controller */,
+				B4F2638C2657AAFE009930FD /* Resources */,
+				B4F2638B2657AAF6009930FD /* Extension */,
 				B4F263822657AA89009930FD /* Info.plist */,
 			);
 			path = PiggyVestClone;
+			sourceTree = "<group>";
+		};
+		B4F263882657AAD6009930FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B4F263892657AAE2009930FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4F2638A2657AAED009930FD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B4F263782657AA88009930FD /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B4F2638B2657AAF6009930FD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B4F2638C2657AAFE009930FD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B4F2637A2657AA88009930FD /* Main.storyboard */,
+				B4F2637F2657AA89009930FD /* LaunchScreen.storyboard */,
+				B4F2637D2657AA89009930FD /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B4F2638D2657ABF1009930FD /* App + Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				B4F263762657AA88009930FD /* SceneDelegate.swift */,
+				B4F263742657AA88009930FD /* AppDelegate.swift */,
+			);
+			path = "App + Delegate";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +125,7 @@
 				B4F2636D2657AA88009930FD /* Sources */,
 				B4F2636E2657AA88009930FD /* Frameworks */,
 				B4F2636F2657AA88009930FD /* Resources */,
+				B4F2638E2657AD09009930FD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -131,6 +180,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B4F2638E2657AD09009930FD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint --config .swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B4F2636D2657AA88009930FD /* Sources */ = {
